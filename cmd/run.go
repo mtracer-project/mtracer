@@ -9,11 +9,11 @@ import (
 	"log/slog"
 	"path/filepath"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/analytics"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/export"
-	idgenerator "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/idGenerator"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/test"
+	"github.com/mtrace-project/mtrace/analytics"
+	"github.com/mtrace-project/mtrace/export"
+	idgenerator "github.com/mtrace-project/mtrace/idGenerator"
+	"github.com/mtrace-project/mtrace/parser"
+	"github.com/mtrace-project/mtrace/test"
 
 	"github.com/moby/moby/client"
 	"github.com/spf13/cobra"

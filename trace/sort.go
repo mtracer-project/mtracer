@@ -3,7 +3,7 @@ package trace
 import (
 	"sort"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/span"
+	"github.com/mtrace-project/mtrace/span"
 )
 
 // SortSpansHierarchically sorts a slice of spans hierarchically: parent first, then children.

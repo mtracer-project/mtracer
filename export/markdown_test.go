@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/test"
+	"github.com/mtrace-project/mtrace/test"
 )
 
 func TestMarkdownExporter_Export(t *testing.T) {

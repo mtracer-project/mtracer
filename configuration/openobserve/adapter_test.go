@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/configuration/openobserve"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/span"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trigger"
+	"github.com/mtrace-project/mtrace/configuration/openobserve"
+	"github.com/mtrace-project/mtrace/parser"
+	"github.com/mtrace-project/mtrace/span"
+	"github.com/mtrace-project/mtrace/trigger"
 )
 
 type mockTraceRepository struct {

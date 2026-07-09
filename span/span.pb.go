@@ -163,7 +163,7 @@ const file_span_span_proto_rawDesc = "" +
 	"attributes\x1aU\n" +
 	"\x0fAttributesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12,\n" +
-	"\x05value\x18\x02 \x01(\v2\x16.google.protobuf.ValueR\x05value:\x028\x01BCZAgitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/spanb\x06proto3"
+	"\x05value\x18\x02 \x01(\v2\x16.google.protobuf.ValueR\x05value:\x028\x01BCZAgithub.com/mtrace-project/mtrace/spanb\x06proto3"
 
 var (
 	file_span_span_proto_rawDescOnce sync.Once

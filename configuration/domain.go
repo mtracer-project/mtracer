@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/configuration/jaeger"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/configuration/openobserve"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trace"
+	"github.com/mtrace-project/mtrace/configuration/jaeger"
+	"github.com/mtrace-project/mtrace/configuration/openobserve"
+	"github.com/mtrace-project/mtrace/trace"
 )
 
 type AppConfig struct {

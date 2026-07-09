@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/domain"
+	"github.com/mtrace-project/mtrace/domain"
 )
 
 const (

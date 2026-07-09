@@ -1,4 +1,4 @@
-module gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace
+module github.com/mtrace-project/mtrace
 
 go 1.26.3
 

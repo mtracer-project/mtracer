@@ -3,8 +3,8 @@ package assertion
 import (
 	"fmt"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trace"
+	"github.com/mtrace-project/mtrace/parser"
+	"github.com/mtrace-project/mtrace/trace"
 
 	"github.com/google/cel-go/cel"
 )

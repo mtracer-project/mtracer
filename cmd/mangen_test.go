@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	testutils "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/testUtils"
+	testutils "github.com/mtrace-project/mtrace/testUtils"
 )
 
 func TestMangenCmd(t *testing.T) {

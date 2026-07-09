@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/configuration"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/domain"
+	"github.com/mtrace-project/mtrace/configuration"
+	"github.com/mtrace-project/mtrace/domain"
 
 	"github.com/lmittmann/tint"
 	"github.com/spf13/cobra"

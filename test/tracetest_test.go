@@ -10,16 +10,16 @@ import (
 	"testing"
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/assertion"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/domain"
-	idgenerator "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/idGenerator"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	postexecchecks "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/postExecChecks"
-	setupcommand "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/setupCommand"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/span"
-	testutils "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/testUtils"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trace"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trigger"
+	"github.com/mtrace-project/mtrace/assertion"
+	"github.com/mtrace-project/mtrace/domain"
+	idgenerator "github.com/mtrace-project/mtrace/idGenerator"
+	"github.com/mtrace-project/mtrace/parser"
+	postexecchecks "github.com/mtrace-project/mtrace/postExecChecks"
+	setupcommand "github.com/mtrace-project/mtrace/setupCommand"
+	"github.com/mtrace-project/mtrace/span"
+	testutils "github.com/mtrace-project/mtrace/testUtils"
+	"github.com/mtrace-project/mtrace/trace"
+	"github.com/mtrace-project/mtrace/trigger"
 )
 
 // Mock SetupCommand

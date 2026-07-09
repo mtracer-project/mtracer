@@ -1,0 +1,34 @@
+name: Release Test (Snapshot)
+
+on:
+  push:
+    branches:
+      - 'develop'
+
+env:
+  GOPRIVATE: "github.com/*"
+
+jobs:
+  goreleaser-release-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.26'
+
+      - name: Run GoReleaser (Snapshot)
+        uses: goreleaser/goreleaser-action@v6
+        with:
+          distribution: goreleaser
+          version: latest
+          args: release --clean --snapshot --skip=sign
+        env:
+          GORELEASER_CURRENT_TAG: v0.0.0-snapshot

@@ -6,14 +6,14 @@ import (
 	"log/slog"
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/assertion"
-	idgenerator "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/idGenerator"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	postexecchecks "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/postExecChecks"
-	setupcommand "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/setupCommand"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/span"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trace"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trigger"
+	"github.com/mtrace-project/mtrace/assertion"
+	idgenerator "github.com/mtrace-project/mtrace/idGenerator"
+	"github.com/mtrace-project/mtrace/parser"
+	postexecchecks "github.com/mtrace-project/mtrace/postExecChecks"
+	setupcommand "github.com/mtrace-project/mtrace/setupCommand"
+	"github.com/mtrace-project/mtrace/span"
+	"github.com/mtrace-project/mtrace/trace"
+	"github.com/mtrace-project/mtrace/trigger"
 
 	"github.com/moby/moby/client"
 )

@@ -4,7 +4,7 @@ import (
 	"google.golang.org/protobuf/types/known/durationpb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/span"
+	"github.com/mtrace-project/mtrace/span"
 )
 
 func (t *Trace) ToProto() *TraceProto {

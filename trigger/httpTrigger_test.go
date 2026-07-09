@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"testing"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	testutils "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/testUtils"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trigger"
+	"github.com/mtrace-project/mtrace/parser"
+	testutils "github.com/mtrace-project/mtrace/testUtils"
+	"github.com/mtrace-project/mtrace/trigger"
 )
 
 func TestHTTPTrigger(t *testing.T) {

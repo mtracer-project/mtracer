@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/span"
+	"github.com/mtrace-project/mtrace/span"
 )
 
 func NewTraceSpansComparator(checker string, ordered bool) TraceSpansComparator {

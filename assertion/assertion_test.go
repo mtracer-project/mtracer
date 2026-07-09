@@ -4,11 +4,11 @@ import (
 	"strings"
 	"testing"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/assertion"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/span"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trace"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trigger"
+	"github.com/mtrace-project/mtrace/assertion"
+	"github.com/mtrace-project/mtrace/parser"
+	"github.com/mtrace-project/mtrace/span"
+	"github.com/mtrace-project/mtrace/trace"
+	"github.com/mtrace-project/mtrace/trigger"
 )
 
 func TestNewAssertion_Factory(t *testing.T) {

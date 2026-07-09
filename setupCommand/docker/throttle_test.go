@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	dockersetupcommand "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/setupCommand/docker"
+	dockersetupcommand "github.com/mtrace-project/mtrace/setupCommand/docker"
 )
 
 type mockThrottleBuilder struct {

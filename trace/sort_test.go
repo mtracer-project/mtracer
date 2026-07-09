@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/span"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trace"
+	"github.com/mtrace-project/mtrace/span"
+	"github.com/mtrace-project/mtrace/trace"
 )
 
 func TestSortSpansHierarchically(t *testing.T) {

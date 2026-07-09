@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/test"
-	testutils "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/testUtils"
+	"github.com/mtrace-project/mtrace/test"
+	testutils "github.com/mtrace-project/mtrace/testUtils"
 )
 
 func TestStdoutExporter_Export(t *testing.T) {

@@ -6,8 +6,8 @@ import (
 	"log/slog"
 	"strings"
 
-	idgenerator "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/idGenerator"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
+	idgenerator "github.com/mtrace-project/mtrace/idGenerator"
+	"github.com/mtrace-project/mtrace/parser"
 
 	nats "github.com/nats-io/nats.go"
 	nkeys "github.com/nats-io/nkeys"

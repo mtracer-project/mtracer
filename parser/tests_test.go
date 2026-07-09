@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	testutils "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/testUtils"
+	"github.com/mtrace-project/mtrace/parser"
+	testutils "github.com/mtrace-project/mtrace/testUtils"
 )
 
 func TestParseTests_EmptyFilePaths(t *testing.T) {

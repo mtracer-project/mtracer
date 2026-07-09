@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
+	"github.com/mtrace-project/mtrace/parser"
 
-	docker "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/setupCommand/docker"
-	shell "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/setupCommand/shell"
+	docker "github.com/mtrace-project/mtrace/setupCommand/docker"
+	shell "github.com/mtrace-project/mtrace/setupCommand/shell"
 
 	"github.com/moby/moby/client"
 )

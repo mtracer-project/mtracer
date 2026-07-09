@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	postexecchecks "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/postExecChecks"
+	"github.com/mtrace-project/mtrace/parser"
+	postexecchecks "github.com/mtrace-project/mtrace/postExecChecks"
 )
 
 func TestNewPostExecCheck(t *testing.T) {

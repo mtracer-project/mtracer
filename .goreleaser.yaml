@@ -24,7 +24,7 @@ builds:
     env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/cmd.version={{.Version}}
+      - -s -w -X github.com/mtrace-project/mtrace/cmd.version={{.Version}}
     goos:
       - darwin
     goarch:
@@ -35,7 +35,7 @@ builds:
     env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/cmd.version={{.Version}}
+      - -s -w -X github.com/mtrace-project/mtrace/cmd.version={{.Version}}
     goos:
       - linux
     goarch:
@@ -46,29 +46,15 @@ builds:
     env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/cmd.version={{.Version}}
+      - -s -w -X github.com/mtrace-project/mtrace/cmd.version={{.Version}}
     goos:
       - windows
     goarch:
       - amd64
       - arm64
 
-#upx:
- # - enabled: true
-  #  goos: [linux]
-   # goarch: [arm64, amd64]
-    #compress: best
-    #brute: false
-
-  #- enabled: true
-   # goos: [windows]
-    #goarch: [amd64]
-    #compress: best
-    #brute: false
-
 gomod:
   proxy: false
-
 
 archives:
   - formats: [zip]
@@ -86,9 +72,9 @@ archives:
       - src: "man/*"
         dst: "man"
 
-gitlab_urls:
-  api: https://gitlab.m31.com/api/v4/
-  download: https://gitlab.m31.com
+github_urls:
+  api: https://api.github.com/
+  download: https://github.com/
 
 report_sizes: true
 
@@ -119,3 +105,7 @@ changelog:
       - "^perf" # performance improvements
       - "^build" # build system changes
       - "^revert" # reverts
+
+slsa:
+  - artifacts: archive
+    id: "archive-provenance"

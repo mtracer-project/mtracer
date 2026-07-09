@@ -5,9 +5,9 @@ import (
 	"strings"
 	"testing"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	setupcommand "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/setupCommand/shell"
-	testutils "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/testUtils"
+	"github.com/mtrace-project/mtrace/parser"
+	setupcommand "github.com/mtrace-project/mtrace/setupCommand/shell"
+	testutils "github.com/mtrace-project/mtrace/testUtils"
 )
 
 func makeShellDTO(cmd string, cleanup *parser.CleanupCommandDTO) *parser.SetupCommandDTO {

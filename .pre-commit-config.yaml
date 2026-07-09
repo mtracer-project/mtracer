@@ -1,0 +1,27 @@
+repos:
+  - repo: local
+    hooks:
+        - id: golangci-lint
+          name: golangci-lint
+          entry: golangci-lint run
+          language: system
+          types: [go]
+          stages: [pre-commit]
+          pass_filenames: false
+
+        - id: gofumpt
+          name: gofumpt
+          entry: gofumpt -l -e -w .
+          language: system
+          types: [go]
+          stages: [pre-commit]
+          pass_filenames: false
+
+
+
+  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+    rev: v9.26.0
+    hooks:
+      - id: commitlint
+        stages: [commit-msg]
+        additional_dependencies: ['@commitlint/config-conventional']

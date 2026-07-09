@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/domain"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/test"
+	"github.com/mtrace-project/mtrace/domain"
+	"github.com/mtrace-project/mtrace/test"
 )
 
 type jsonExporter struct {

@@ -6,10 +6,10 @@ import (
 	"strings"
 	"testing"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/cmd"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/configuration"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/configuration/openobserve"
-	testutils "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/testUtils"
+	"github.com/mtrace-project/mtrace/cmd"
+	"github.com/mtrace-project/mtrace/configuration"
+	"github.com/mtrace-project/mtrace/configuration/openobserve"
+	testutils "github.com/mtrace-project/mtrace/testUtils"
 )
 
 func TestCheckTestCase_InvalidArgument(t *testing.T) {

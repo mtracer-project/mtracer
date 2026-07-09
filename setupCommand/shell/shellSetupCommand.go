@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/domain"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
+	"github.com/mtrace-project/mtrace/domain"
+	"github.com/mtrace-project/mtrace/parser"
 )
 
 /*---------------- SetupCommand ----------------*/

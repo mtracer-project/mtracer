@@ -3,7 +3,7 @@ package export
 import (
 	"testing"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/test"
+	"github.com/mtrace-project/mtrace/test"
 )
 
 func TestFormatDetails(t *testing.T) {

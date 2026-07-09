@@ -6,8 +6,8 @@ import (
 	"slices"
 	"strings"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/test"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trace"
+	"github.com/mtrace-project/mtrace/test"
+	"github.com/mtrace-project/mtrace/trace"
 )
 
 type TestAnalytics struct {

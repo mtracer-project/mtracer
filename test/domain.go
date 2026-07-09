@@ -3,7 +3,7 @@ package test
 import (
 	"time"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/trace"
+	"github.com/mtrace-project/mtrace/trace"
 )
 
 type Test interface {

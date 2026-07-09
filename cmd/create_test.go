@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/cmd"
-	testutils "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/testUtils"
+	"github.com/mtrace-project/mtrace/cmd"
+	testutils "github.com/mtrace-project/mtrace/testUtils"
 )
 
 func TestCreateTestCase_NoArgs(t *testing.T) {

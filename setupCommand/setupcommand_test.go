@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/parser"
-	setupcommand "gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/setupCommand"
+	"github.com/mtrace-project/mtrace/parser"
+	setupcommand "github.com/mtrace-project/mtrace/setupCommand"
 )
 
 func TestNewSetupCommand(t *testing.T) {

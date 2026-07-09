@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/mtrace-project/mtrace/test"
 	"github.com/olekukonko/tablewriter"
-	"gitlab.m31.com/m31/academy/devops/cloud-trace-testing/mtrace/test"
 )
 
 type stdoutExporter struct {
