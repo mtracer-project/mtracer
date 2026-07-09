@@ -4,6 +4,7 @@ run:
   timeout: 5m
   print-issued-lines: true
   print-linter-name: true
+  concurrency: 4
 
 linters:
   disable-all: true
@@ -16,6 +17,9 @@ linters:
     - bodyclose
     - noctx
     - asasalint
+    #- revive
+    #- gosec
+    #- nilerr
 
 linters-settings:
   gocyclo:
