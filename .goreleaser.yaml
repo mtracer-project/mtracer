@@ -144,11 +144,6 @@ homebrew_casks:
     commit_author:
       name: mtrace-releaser
       email: alessandro.dinato@gmail.com
-      signing:
-        enabled: true
-        key: "{{ .Env.GPG_SIGNING_KEY }}"
-        program: gpg
-        format: openpgp
 
 # Winget and Scoop configuration
 winget:
