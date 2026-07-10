@@ -48,6 +48,7 @@ jobs:
           HOMEBREW_TAP_GITHUB_TOKEN: ${{ secrets.HOMEBREW_TAP_GITHUB_TOKEN }}
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
           GORELEASER_CURRENT_TAG: ${{ github.ref_name }}
 
       - name: Upload artifacts
