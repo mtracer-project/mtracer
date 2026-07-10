@@ -18,14 +18,14 @@ homebrew_casks:
         - pwsh
     url:
       # URL which is determined by the given Token (github, gitlab or gitea).
-      template: "https://github.com/aledinato/mtrace/cli/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+      template: "https://github.com/mtrace-project/mtrace/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
       # Used when the domains of `url` and `homepage` differ.
-      verified: "github.com/aledinato/mtrace/cli"
+      verified: "github.com/mtrace-project/mtrace"
       # Tool's website, will become github pages
       cookies:
         license: "accept-backup"
     commit_msg_template: "Brew cask update for {{ .ProjectName }} version {{ .Tag }}"
-    homepage: https://github.com/aledinato/mtrace
+    homepage: https://github.com/mtrace-project/mtrace
     caveats: "🚀 Let's trace!"
     description: >-
       {{ .ProjectName }} is a CLI tool designed to facilitate testing through trace validation with tracing functionalities on distributed systems, released in version {{ .Tag }}.

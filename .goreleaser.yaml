@@ -71,11 +71,6 @@ archives:
     files:
       - src: "man/*"
         dst: "man"
-
-github_urls:
-  api: https://api.github.com/
-  download: https://github.com/
-
 report_sizes: true
 
 signs:
