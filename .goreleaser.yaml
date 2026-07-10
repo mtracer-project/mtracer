@@ -157,7 +157,12 @@ homebrew_casks:
         program: gpg
         format: openpgp
 
-
+release:
+  github:
+    owner: mtrace-project
+    name: mtrace
+  replace_existing_artifacts: true
+  mode: replace
 
 signs:
   - artifacts: checksum
