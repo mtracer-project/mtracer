@@ -168,8 +168,15 @@ winget:
     repository:
       owner: mtrace-project
       name: winget-pkgs
-      branch: main
+      branch: mtrace-release-{{.Version}}
       token: "{{ .Env.PKG_PUBLISHER_GITHUB_TOKEN }}"
+      pull_request:
+        enabled: true
+        draft: false
+        base:
+          owner: microsoft
+          name: winget-pkgs
+          branch: master
     commit_author:
       name: mtrace-releaser
       email: alessandro.dinato@gmail.com
