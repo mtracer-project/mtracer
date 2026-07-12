@@ -169,7 +169,7 @@ winget:
       owner: mtrace-project
       name: winget-pkgs
       branch: mtrace-release-{{.Version}}
-      token: "{{ .Env.PKG_PUBLISHER_GITHUB_TOKEN }}"
+      token: "{{ .Env.PUBLIC_PKG_PUBLISHER_GITHUB_TOKEN }}"
       pull_request:
         enabled: true
         draft: false
