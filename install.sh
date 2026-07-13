@@ -1,71 +1,108 @@
-#!/usr/bin/env bash
+#!/bin/sh
 set -e
+
+# Repository
+REPO="mtracer-project/mtracer"
 
 # Determine OS and Architecture
 OS="$(uname -s)"
 ARCH="$(uname -m)"
 
-case "${OS}" in
-    Linux*)     OS='Linux';;
-    Darwin*)    OS='Darwin';;
-    *)          echo "Unsupported OS: ${OS}"; exit 1;;
-esac
+if [ "$OS" = "Linux" ]; then
+    OS_NAME="Linux"
+    EXT="tar.zst"
+elif [ "$OS" = "Darwin" ]; then
+    OS_NAME="Darwin"
+    EXT="zip"
+else
+    echo "This script is intended for Linux and macOS."
+    echo "For Windows, please see the GitHub Releases page or use Winget/Scoop."
+    exit 1
+fi
 
-case "${ARCH}" in
-    x86_64)     ARCH='x86_64';;
-    amd64)      ARCH='x86_64';;
-    aarch64)    ARCH='arm64';;
-    arm64)      ARCH='arm64';;
-    *)          echo "Unsupported architecture: ${ARCH}"; exit 1;;
-esac
+# Map architecture to the format used by GoReleaser
+if [ "$ARCH" = "x86_64" ]; then
+    ARCH_NAME="x86_64"
+elif [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
+    ARCH_NAME="arm64"
+else
+    echo "Unsupported architecture: $ARCH"
+    exit 1
+fi
 
-REPO="mtracer-project/mtracer"
-REQUESTED_VERSION="${1:-latest}"
+# Determine Version (use $1 if provided)
+VERSION=$1
 
-if [ "${REQUESTED_VERSION}" = "latest" ]; then
-    echo "Fetching latest release for ${REPO}..."
-    LATEST_RELEASE=$(curl -s https://api.github.com/repos/${REPO}/releases/latest)
-    VERSION=$(echo "${LATEST_RELEASE}" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-
-    if [ -z "${VERSION}" ]; then
-        echo "Failed to get the latest release version."
+if [ -z "$VERSION" ]; then
+    echo "Fetching the latest version..."
+    LATEST_RELEASE=$(curl -sL "https://api.github.com/repos/$REPO/releases/latest")
+    VERSION=$(echo "$LATEST_RELEASE" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+    
+    if [ -z "$VERSION" ]; then
+        echo "Failed to fetch the latest version. Check your internet connection or GitHub API limits."
         exit 1
     fi
-    echo "Latest version is ${VERSION}"
+    echo "Latest version is $VERSION"
 else
-    VERSION="${REQUESTED_VERSION}"
-    if [[ "${VERSION}" != v* ]]; then
-        VERSION="v${VERSION}"
-    fi
-    echo "Using requested version: ${VERSION}"
+    # Ensure it starts with a 'v' for the download URL if they just passed numbers
+    case "$VERSION" in
+        v*) ;;
+        *) VERSION="v$VERSION" ;;
+    esac
+    echo "Using specified version: $VERSION"
 fi
 
-# Determine file extension based on what goreleaser generates
-if [ "${OS}" = "Linux" ]; then
-    EXT="tar.zst"
-else
-    EXT="zip"
-fi
-
-FILENAME="mtracer_${VERSION#v}_${OS}_${ARCH}.${EXT}"
+# The artifact name uses the version without the 'v' prefix
+CLEAN_VERSION=$(echo "$VERSION" | sed 's/^v//')
+FILENAME="mtracer_${CLEAN_VERSION}_${OS_NAME}_${ARCH_NAME}.${EXT}"
 DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${VERSION}/${FILENAME}"
 
-echo "Downloading ${FILENAME} from ${DOWNLOAD_URL}..."
-curl -sL "${DOWNLOAD_URL}" -o "${FILENAME}"
+# Download
+TMP_DIR=$(mktemp -d)
+cd "$TMP_DIR"
 
-echo "Extracting..."
-if [ "${EXT}" = "zip" ]; then
-    unzip -q "${FILENAME}" -d mtracer_tmp
+echo "Downloading $FILENAME from GitHub..."
+curl -sL "$DOWNLOAD_URL" -o "$FILENAME"
+
+# Extract
+echo "Extracting $FILENAME..."
+if [ "$EXT" = "zip" ]; then
+    unzip -q "$FILENAME" || { echo "Extraction failed. Please make sure 'unzip' is installed."; exit 1; }
 else
-    mkdir -p mtracer_tmp
-    tar -I zstd -xf "${FILENAME}" -C mtracer_tmp
+    # Attempt to extract with tar, check for zstd support
+    if tar --version 2>/dev/null | grep -q 'GNU tar'; then
+        tar --zstd -xf "$FILENAME" || { echo "Extraction failed. Please make sure 'zstd' is installed (e.g., sudo apt install zstd)."; exit 1; }
+    else
+        # Fallback to direct zstd | tar pipeline
+        if command -v zstd >/dev/null 2>&1; then
+            zstd -d "$FILENAME" --stdout | tar -xf -
+        else
+            echo "Error: 'zstd' command not found and tar does not support --zstd."
+            echo "Please install zstd (e.g., sudo apt install zstd) and try again."
+            exit 1
+        fi
+    fi
 fi
 
-echo "Installing to /usr/local/bin/mtracer (requires sudo)..."
-sudo mv mtracer_tmp/mtracer /usr/local/bin/mtracer
-sudo chmod +x /usr/local/bin/mtracer
+# Install
+INSTALL_DIR="/usr/local/bin"
+echo "Installing 'mtracer' to $INSTALL_DIR (may require sudo)..."
 
-# Cleanup
-rm -rf mtracer_tmp "${FILENAME}"
+# Ensure the extracted binary exists.
+if [ -f "mtracer" ]; then
+    sudo mv mtracer "$INSTALL_DIR/"
+    sudo chmod +x "$INSTALL_DIR/mtracer"
+elif [ -f "bin/mtracer" ]; then
+    sudo mv bin/mtracer "$INSTALL_DIR/"
+    sudo chmod +x "$INSTALL_DIR/mtracer"
+else
+    echo "Could not find 'mtracer' executable in the archive."
+    exit 1
+fi
 
-echo "mtracer installed successfully!"
+# Clean up
+cd - > /dev/null
+rm -rf "$TMP_DIR"
+
+echo "Installation complete!"
+echo "Run 'mtracer --help' to verify."

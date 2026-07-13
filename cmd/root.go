@@ -55,6 +55,7 @@ func init() {
 		}
 	}
 	rootCmd.Version = Version
+	rootCmd.CompletionOptions.HiddenDefaultCmd = true
 
 	rootCmd.PersistentFlags().StringVarP(&Config.Directory, "dir", "d", "", "Directory to apply the command to")
 	rootCmd.PersistentFlags().StringVarP(&ConfigFile, "config", "c", "", "Path to configuration file")

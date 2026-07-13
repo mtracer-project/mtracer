@@ -107,6 +107,7 @@ report_sizes: true
 homebrew_casks:
   - ids:
       - mtracer-darwin
+      - mtracer-linux
     manpages:
       - man/*.1
       - "!man/*-completion*.1"

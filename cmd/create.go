@@ -66,7 +66,8 @@ func CreateTestCase(cmd *cobra.Command, args []string) {
 		triggerExample = trigger.Example()
 	}
 
-	templateContent := `
+	// nolint:gosec
+	templateContent := ` 
 name: "%s"
 description: "Description of the test case"
 setupCommands:
@@ -79,6 +80,11 @@ setupCommands:
 waitBeforeFetch: 5s
 timeout: 60s
 retryDelay: 1s
+lastSpan:
+  serviceName: "example2-service"
+  operationName: "destroyed-everything"
+  spanKind: "internal"
+  spanStatus: "unset"
 expectedProperties:
   maxDuration: 30s
   minDuration: 1s
@@ -99,11 +105,12 @@ assertions:
     queries:
       errorCheck: "trace.errorCount == 0"
       spanStatusCheck: "trace.spans.all(s, s.spanStatus == 'UNSET')"
-lastSpan:
-  serviceName: "example2-service"
-  operationName: "destroyed-everything"
-  spanKind: "internal"
-  spanStatus: "unset"
+postExecChecks:
+  - name: "Check if there are any rolls for Alice in the database"
+    type: "sql"
+    args:
+      dsn: "postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable"
+      query: "(SELECT COUNT(*) FROM rolls WHERE player_name = 'Alice') > 0"
 `
 
 	formattedContent := fmt.Sprintf(templateContent, testName, triggerExample)
