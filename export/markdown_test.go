@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mtrace-project/mtrace/test"
+	"github.com/mtracer-project/mtracer/test"
 )
 
 func TestMarkdownExporter_Export(t *testing.T) {

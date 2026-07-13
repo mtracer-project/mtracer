@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mtrace-project/mtrace/parser"
-	testutils "github.com/mtrace-project/mtrace/testUtils"
-	"github.com/mtrace-project/mtrace/trigger"
+	"github.com/mtracer-project/mtracer/parser"
+	testutils "github.com/mtracer-project/mtracer/testUtils"
+	"github.com/mtracer-project/mtracer/trigger"
 
 	nats "github.com/nats-io/nats.go"
 )

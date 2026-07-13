@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mtrace-project/mtrace/configuration/openobserve"
-	"github.com/mtrace-project/mtrace/parser"
-	"github.com/mtrace-project/mtrace/span"
-	"github.com/mtrace-project/mtrace/trigger"
+	"github.com/mtracer-project/mtracer/configuration/openobserve"
+	"github.com/mtracer-project/mtracer/parser"
+	"github.com/mtracer-project/mtracer/span"
+	"github.com/mtracer-project/mtracer/trigger"
 )
 
 type mockTraceRepository struct {

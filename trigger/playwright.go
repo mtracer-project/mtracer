@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	idgenerator "github.com/mtrace-project/mtrace/idGenerator"
-	"github.com/mtrace-project/mtrace/parser"
+	idgenerator "github.com/mtracer-project/mtracer/idGenerator"
+	"github.com/mtracer-project/mtracer/parser"
 )
 
 const (
@@ -107,7 +107,7 @@ func (t *PlaywrightTrigger) Trigger() (TraceId, error) {
 
 	cmd := exec.CommandContext(t.ctx, "npx", args...) // nolint:gosec
 	cmd.Dir = filepath.Join(t.baseDir, t.playwrightPath)
-	cmd.Env = append(os.Environ(), fmt.Sprintf("MTRACE_PLAYWRIGHT_SERVER_URL=%s", fmt.Sprintf("http://%s%s", srv.Addr, PLAYWRIGHT_SERVER_ENDPOINT)))
+	cmd.Env = append(os.Environ(), fmt.Sprintf("MTRACER_PLAYWRIGHT_SERVER_URL=%s", fmt.Sprintf("http://%s%s", srv.Addr, PLAYWRIGHT_SERVER_ENDPOINT)))
 
 	if slog.Default().Enabled(t.ctx, slog.LevelInfo) {
 		cmd.Stdout = os.Stdout

@@ -3,8 +3,8 @@ package assertion
 import (
 	"fmt"
 
-	"github.com/mtrace-project/mtrace/parser"
-	"github.com/mtrace-project/mtrace/trace"
+	"github.com/mtracer-project/mtracer/parser"
+	"github.com/mtracer-project/mtracer/trace"
 
 	"github.com/google/cel-go/cel"
 )
@@ -56,7 +56,7 @@ func NewCelAssertion(dto *parser.AssertionDTO) (*CelAssertion, error) {
 		cel.Types(&trace.TraceProto{}),
 		cel.Variable(
 			"trace",
-			cel.ObjectType("mtrace.trace.TraceProto"),
+			cel.ObjectType("mtracer.trace.TraceProto"),
 		),
 	)
 	if err != nil {

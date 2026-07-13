@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mtrace-project/mtrace/domain"
-	"github.com/mtrace-project/mtrace/span"
-	"github.com/mtrace-project/mtrace/trace"
-	"github.com/mtrace-project/mtrace/trigger"
+	"github.com/mtracer-project/mtracer/domain"
+	"github.com/mtracer-project/mtracer/span"
+	"github.com/mtracer-project/mtracer/trace"
+	"github.com/mtracer-project/mtracer/trigger"
 )
 
 type JaegerTraceAdapter struct {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mtrace-project/mtrace/span"
+	"github.com/mtracer-project/mtracer/span"
 )
 
 func NewTraceSpansComparator(checker string, ordered bool) TraceSpansComparator {

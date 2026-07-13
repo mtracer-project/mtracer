@@ -8,7 +8,7 @@
 
 version: 2
 
-project_name: mtrace
+project_name: mtracer
 
 git:
   tag_sort: semver
@@ -20,33 +20,33 @@ before:
     - go run main.go gendocs 
 
 builds:
-  - id: mtrace-darwin
+  - id: mtracer-darwin
     env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X github.com/mtrace-project/mtrace/cmd.Version={{.Version}}
+      - -s -w -X github.com/mtracer-project/mtracer/cmd.Version={{.Version}}
     goos:
       - darwin
     goarch:
       - amd64
       - arm64
 
-  - id: mtrace-linux
+  - id: mtracer-linux
     env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X github.com/mtrace-project/mtrace/cmd.Version={{.Version}}
+      - -s -w -X github.com/mtracer-project/mtracer/cmd.Version={{.Version}}
     goos:
       - linux
     goarch:
       - amd64
       - arm64
 
-  - id: mtrace-windows
+  - id: mtracer-windows
     env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X github.com/mtrace-project/mtrace/cmd.Version={{.Version}}
+      - -s -w -X github.com/mtracer-project/mtracer/cmd.Version={{.Version}}
     goos:
       - windows
     goarch:
@@ -57,9 +57,9 @@ gomod:
   proxy: false
 
 archives:
-  - id: mtrace-darwin
+  - id: mtracer-darwin
     ids:
-      - mtrace-darwin
+      - mtracer-darwin
     formats: [zip]
     name_template: >-
       {{ .ProjectName }}_
@@ -72,9 +72,9 @@ archives:
       - src: "man/*"
         dst: "man"
 
-  - id: mtrace-linux
+  - id: mtracer-linux
     ids:
-      - mtrace-linux
+      - mtracer-linux
     formats: [tar.zst]
     name_template: >-
       {{ .ProjectName }}_
@@ -87,9 +87,9 @@ archives:
       - src: "man/*"
         dst: "man"
 
-  - id: mtrace-windows
+  - id: mtracer-windows
     ids:
-      - mtrace-windows
+      - mtracer-windows
     formats: [zip]
     name_template: >-
       {{ .ProjectName }}_
@@ -106,13 +106,13 @@ report_sizes: true
 # Homebrew configuration
 homebrew_casks:
   - ids:
-      - mtrace-darwin
+      - mtracer-darwin
     manpages:
       - man/*.1
       - "!man/*-completion*.1"
 
     generate_completions_from_executable:
-      executable: "bin/mtrace"
+      executable: "bin/mtracer"
       args:
         - completion
       shell_parameter_format: cobra
@@ -123,40 +123,40 @@ homebrew_casks:
         - pwsh
     url:
       # URL which is determined by the given Token (github, gitlab or gitea).
-      template: "https://github.com/mtrace-project/mtrace/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+      template: "https://github.com/mtracer-project/mtracer/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
       # Used when the domains of `url` and `homepage` differ.
-      verified: "github.com/mtrace-project/mtrace"
+      verified: "github.com/mtracer-project/mtracer"
       # Tool's website, will become github pages
       cookies:
         license: "accept-backup"
     commit_msg_template: "Brew cask update for {{ .ProjectName }} version {{ .Tag }}"
-    homepage: https://github.com/mtrace-project/mtrace
+    homepage: https://github.com/mtracer-project/mtracer
     caveats: "🚀 Let's trace!"
     description: >-
       {{ .ProjectName }} is a CLI tool designed to facilitate testing through trace validation with tracing functionalities on distributed systems, released in version {{ .Tag }}.
     skip_upload: auto
     # Repository to push the generated files to.
     repository:
-      owner: mtrace-project
+      owner: mtracer-project
       name: homebrew-tap
       branch: main
       token: "{{ .Env.PKG_PUBLISHER_GITHUB_TOKEN }}"
     commit_author:
-      name: mtrace-releaser
+      name: mtracer-releaser
       email: alessandro.dinato@gmail.com
 
 # Winget and Scoop configuration
 winget:
-  - name: mtrace
+  - name: mtracer
     ids:
-      - mtrace-windows
-    publisher: mtrace
+      - mtracer-windows
+    publisher: mtracer
     short_description: "CLI tool designed to facilitate testing through trace validation"
     license: "AGPL-3.0"
-    publisher_url: https://github.com/mtrace-project
-    package_identifier: mtrace.mtrace
-    homepage: "https://mtrace-project.github.io"
-    description: "mtrace is a CLI tool designed to facilitate testing through trace validation with tracing functionalities on distributed systems."
+    publisher_url: https://github.com/mtracer-project
+    package_identifier: mtracer.mtracer
+    homepage: "https://mtracer-project.github.io"
+    description: "mtracer is a CLI tool designed to facilitate testing through trace validation with tracing functionalities on distributed systems."
     tags:
       - golang
       - e2e
@@ -166,10 +166,10 @@ winget:
       - cli
       - tracing
     repository:
-      owner: mtrace-project
+      owner: mtracer-project
       name: winget-pkgs
-      branch: mtrace-release-{{.Version}}
-      token: "{{ .Env.PKG_PUBLISHER_GITHUB_TOKEN }}"
+      branch: mtracer-release-{{.Version}}
+      token: "{{ .Env.PUBLIC_PKG_PUBLISHER_GITHUB_TOKEN }}"
       pull_request:
         enabled: true
         draft: false
@@ -178,29 +178,29 @@ winget:
           name: winget-pkgs
           branch: master
     commit_author:
-      name: mtrace-releaser
+      name: mtracer-releaser
       email: alessandro.dinato@gmail.com
 
 scoops:
-  - name: mtrace
+  - name: mtracer
     ids:
-      - mtrace-windows
-    description: "mtrace is a CLI tool designed to facilitate testing through trace validation."
-    homepage: "https://mtrace-project.github.io"
+      - mtracer-windows
+    description: "mtracer is a CLI tool designed to facilitate testing through trace validation."
+    homepage: "https://mtracer-project.github.io"
     license: "AGPL-3.0"
     repository:
-      owner: mtrace-project
+      owner: mtracer-project
       name: scoop-bucket
       branch: main
       token: "{{ .Env.PKG_PUBLISHER_GITHUB_TOKEN }}"
     commit_author:
-      name: mtrace-releaser
+      name: mtracer-releaser
       email: alessandro.dinato@gmail.com
 
 release:
   github:
-    owner: mtrace-project
-    name: mtrace
+    owner: mtracer-project
+    name: mtracer
   replace_existing_artifacts: true
   mode: replace
 

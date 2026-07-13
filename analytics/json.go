@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mtrace-project/mtrace/domain"
-	"github.com/mtrace-project/mtrace/trace"
+	"github.com/mtracer-project/mtracer/domain"
+	"github.com/mtracer-project/mtracer/trace"
 )
 
 type jsonAnalyticsExporter struct {

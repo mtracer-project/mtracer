@@ -3,7 +3,7 @@ package test
 import (
 	"time"
 
-	"github.com/mtrace-project/mtrace/trace"
+	"github.com/mtracer-project/mtracer/trace"
 )
 
 type Test interface {

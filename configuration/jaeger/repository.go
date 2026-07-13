@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mtrace-project/mtrace/trigger"
+	"github.com/mtracer-project/mtracer/trigger"
 )
 
 const (

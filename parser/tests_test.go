@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mtrace-project/mtrace/parser"
-	testutils "github.com/mtrace-project/mtrace/testUtils"
+	"github.com/mtracer-project/mtracer/parser"
+	testutils "github.com/mtracer-project/mtracer/testUtils"
 )
 
 func TestParseTests_EmptyFilePaths(t *testing.T) {
@@ -30,7 +30,7 @@ func TestParseTests_NonExistentFile(t *testing.T) {
 }
 
 func TestParseTests_MalformedYAML(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-parser-test")
+	tempDir, err := os.MkdirTemp("", "mtracer-parser-test")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -48,7 +48,7 @@ trigger:
 }
 
 func TestParseTests_EmptyFile(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-parser-test")
+	tempDir, err := os.MkdirTemp("", "mtracer-parser-test")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -63,7 +63,7 @@ func TestParseTests_EmptyFile(t *testing.T) {
 }
 
 func TestParseTests_CommentsOnlyFile(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-parser-test")
+	tempDir, err := os.MkdirTemp("", "mtracer-parser-test")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -78,7 +78,7 @@ func TestParseTests_CommentsOnlyFile(t *testing.T) {
 }
 
 func TestParseTests_ValidationError(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-parser-test")
+	tempDir, err := os.MkdirTemp("", "mtracer-parser-test")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -96,7 +96,7 @@ name: "Invalid Test"
 }
 
 func TestParseTests_Success(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-parser-test")
+	tempDir, err := os.MkdirTemp("", "mtracer-parser-test")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}

@@ -6,14 +6,14 @@ import (
 	"log/slog"
 	"time"
 
-	"github.com/mtrace-project/mtrace/assertion"
-	idgenerator "github.com/mtrace-project/mtrace/idGenerator"
-	"github.com/mtrace-project/mtrace/parser"
-	postexecchecks "github.com/mtrace-project/mtrace/postExecChecks"
-	setupcommand "github.com/mtrace-project/mtrace/setupCommand"
-	"github.com/mtrace-project/mtrace/span"
-	"github.com/mtrace-project/mtrace/trace"
-	"github.com/mtrace-project/mtrace/trigger"
+	"github.com/mtracer-project/mtracer/assertion"
+	idgenerator "github.com/mtracer-project/mtracer/idGenerator"
+	"github.com/mtracer-project/mtracer/parser"
+	postexecchecks "github.com/mtracer-project/mtracer/postExecChecks"
+	setupcommand "github.com/mtracer-project/mtracer/setupCommand"
+	"github.com/mtracer-project/mtracer/span"
+	"github.com/mtracer-project/mtracer/trace"
+	"github.com/mtracer-project/mtracer/trigger"
 
 	"github.com/moby/moby/client"
 )

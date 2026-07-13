@@ -6,7 +6,7 @@ import (
 	"google.golang.org/protobuf/types/known/durationpb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/mtrace-project/mtrace/span"
+	"github.com/mtracer-project/mtracer/span"
 )
 
 func (t *Trace) ToProto() *TraceProto {

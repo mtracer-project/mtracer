@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/configuration"
-	"github.com/mtrace-project/mtrace/configuration/jaeger"
-	"github.com/mtrace-project/mtrace/configuration/openobserve"
+	"github.com/mtracer-project/mtracer/configuration"
+	"github.com/mtracer-project/mtracer/configuration/jaeger"
+	"github.com/mtracer-project/mtracer/configuration/openobserve"
 )
 
 func TestNewTraceAdapterFromConfig_OpenObserve(t *testing.T) {

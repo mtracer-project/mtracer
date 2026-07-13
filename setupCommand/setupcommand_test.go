@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/parser"
-	setupcommand "github.com/mtrace-project/mtrace/setupCommand"
+	"github.com/mtracer-project/mtracer/parser"
+	setupcommand "github.com/mtracer-project/mtracer/setupCommand"
 )
 
 func TestNewSetupCommand(t *testing.T) {

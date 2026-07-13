@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/configuration/openobserve"
-	testutils "github.com/mtrace-project/mtrace/testUtils"
-	"github.com/mtrace-project/mtrace/trigger"
+	"github.com/mtracer-project/mtracer/configuration/openobserve"
+	testutils "github.com/mtracer-project/mtracer/testUtils"
+	"github.com/mtracer-project/mtracer/trigger"
 )
 
 func TestOpenObserveTraceRepository_Get_Success(t *testing.T) {

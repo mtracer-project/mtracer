@@ -1,4 +1,4 @@
-module github.com/mtrace-project/mtrace
+module github.com/mtracer-project/mtracer
 
 go 1.26.3
 

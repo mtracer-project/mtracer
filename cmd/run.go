@@ -9,11 +9,11 @@ import (
 	"log/slog"
 	"path/filepath"
 
-	"github.com/mtrace-project/mtrace/analytics"
-	"github.com/mtrace-project/mtrace/export"
-	idgenerator "github.com/mtrace-project/mtrace/idGenerator"
-	"github.com/mtrace-project/mtrace/parser"
-	"github.com/mtrace-project/mtrace/test"
+	"github.com/mtracer-project/mtracer/analytics"
+	"github.com/mtracer-project/mtracer/export"
+	idgenerator "github.com/mtracer-project/mtracer/idGenerator"
+	"github.com/mtracer-project/mtracer/parser"
+	"github.com/mtracer-project/mtracer/test"
 
 	"github.com/moby/moby/client"
 	"github.com/spf13/cobra"

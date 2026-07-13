@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mtrace-project/mtrace/test"
+	"github.com/mtracer-project/mtracer/test"
 )
 
 func formatDetails(result *test.TestResult) string {

@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	idgenerator "github.com/mtrace-project/mtrace/idGenerator"
-	"github.com/mtrace-project/mtrace/parser"
+	idgenerator "github.com/mtracer-project/mtracer/idGenerator"
+	"github.com/mtracer-project/mtracer/parser"
 
 	"github.com/bufbuild/protocompile"
 	"github.com/jhump/protoreflect/grpcreflect"

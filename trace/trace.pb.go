@@ -7,7 +7,7 @@
 package trace
 
 import (
-	span "github.com/mtrace-project/mtrace/span"
+	span "github.com/mtracer-project/mtracer/span"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
@@ -120,7 +120,7 @@ var File_trace_trace_proto protoreflect.FileDescriptor
 
 const file_trace_trace_proto_rawDesc = "" +
 	"\n" +
-	"\x11trace/trace.proto\x12\fmtrace.trace\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x0fspan/span.proto\"\xbe\x02\n" +
+	"\x11trace/trace.proto\x12\rmtracer.trace\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x0fspan/span.proto\"\xbf\x02\n" +
 	"\n" +
 	"TraceProto\x12\x19\n" +
 	"\btrace_id\x18\x01 \x01(\tR\atraceId\x129\n" +
@@ -131,8 +131,8 @@ const file_trace_trace_proto_rawDesc = "" +
 	"\n" +
 	"span_count\x18\x05 \x01(\x05R\tspanCount\x12\x1f\n" +
 	"\verror_count\x18\x06 \x01(\x05R\n" +
-	"errorCount\x12,\n" +
-	"\x05spans\x18\a \x03(\v2\x16.mtrace.span.SpanProtoR\x05spansB(Z&github.com/mtrace-project/mtrace/traceb\x06proto3"
+	"errorCount\x12-\n" +
+	"\x05spans\x18\a \x03(\v2\x17.mtracer.span.SpanProtoR\x05spansB*Z(github.com/mtracer-project/mtracer/traceb\x06proto3"
 
 var (
 	file_trace_trace_proto_rawDescOnce sync.Once
@@ -148,16 +148,16 @@ func file_trace_trace_proto_rawDescGZIP() []byte {
 
 var file_trace_trace_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_trace_trace_proto_goTypes = []any{
-	(*TraceProto)(nil),            // 0: mtrace.trace.TraceProto
+	(*TraceProto)(nil),            // 0: mtracer.trace.TraceProto
 	(*timestamppb.Timestamp)(nil), // 1: google.protobuf.Timestamp
 	(*durationpb.Duration)(nil),   // 2: google.protobuf.Duration
-	(*span.SpanProto)(nil),        // 3: mtrace.span.SpanProto
+	(*span.SpanProto)(nil),        // 3: mtracer.span.SpanProto
 }
 var file_trace_trace_proto_depIdxs = []int32{
-	1, // 0: mtrace.trace.TraceProto.start_time:type_name -> google.protobuf.Timestamp
-	1, // 1: mtrace.trace.TraceProto.end_time:type_name -> google.protobuf.Timestamp
-	2, // 2: mtrace.trace.TraceProto.duration:type_name -> google.protobuf.Duration
-	3, // 3: mtrace.trace.TraceProto.spans:type_name -> mtrace.span.SpanProto
+	1, // 0: mtracer.trace.TraceProto.start_time:type_name -> google.protobuf.Timestamp
+	1, // 1: mtracer.trace.TraceProto.end_time:type_name -> google.protobuf.Timestamp
+	2, // 2: mtracer.trace.TraceProto.duration:type_name -> google.protobuf.Duration
+	3, // 3: mtracer.trace.TraceProto.spans:type_name -> mtracer.span.SpanProto
 	4, // [4:4] is the sub-list for method output_type
 	4, // [4:4] is the sub-list for method input_type
 	4, // [4:4] is the sub-list for extension type_name

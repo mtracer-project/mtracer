@@ -12,8 +12,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/parser"
-	testutils "github.com/mtrace-project/mtrace/testUtils"
+	"github.com/mtracer-project/mtracer/parser"
+	testutils "github.com/mtracer-project/mtracer/testUtils"
 )
 
 func TestPlaywrightTrigger_Init(t *testing.T) {
@@ -155,13 +155,13 @@ func TestPlaywrightTrigger_Trigger_Success(t *testing.T) {
 		SpanID:  "abcdefabcdefabcdef",
 	}
 
-	// We create a mock npx script that curls/wgets the MTRACE_PLAYWRIGHT_SERVER_URL
+	// We create a mock npx script that curls/wgets the MTRACER_PLAYWRIGHT_SERVER_URL
 	scriptContent := `#!/bin/sh
-if [ -n "$MTRACE_PLAYWRIGHT_SERVER_URL" ]; then
+if [ -n "$MTRACER_PLAYWRIGHT_SERVER_URL" ]; then
   if command -v curl >/dev/null 2>&1; then
-    curl -s "$MTRACE_PLAYWRIGHT_SERVER_URL" > /dev/null
+    curl -s "$MTRACER_PLAYWRIGHT_SERVER_URL" > /dev/null
   elif command -v wget >/dev/null 2>&1; then
-    wget -q -O /dev/null "$MTRACE_PLAYWRIGHT_SERVER_URL"
+    wget -q -O /dev/null "$MTRACER_PLAYWRIGHT_SERVER_URL"
   else
     echo "Neither curl nor wget found" >&2
     exit 1

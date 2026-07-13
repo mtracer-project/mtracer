@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"github.com/mtrace-project/mtrace/domain"
+	"github.com/mtracer-project/mtracer/domain"
 )
 
 type TestDTO struct {

@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"testing"
 
-	idgenerator "github.com/mtrace-project/mtrace/idGenerator"
+	idgenerator "github.com/mtracer-project/mtracer/idGenerator"
 )
 
 func TestIdGeneratorV1Generate(t *testing.T) {

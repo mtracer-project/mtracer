@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	testutils "github.com/mtrace-project/mtrace/testUtils"
+	testutils "github.com/mtracer-project/mtracer/testUtils"
 )
 
 func TestMangenCmd(t *testing.T) {
@@ -33,7 +33,7 @@ func TestMangenCmd(t *testing.T) {
 		t.Errorf("expected success message, got: %v", output)
 	}
 
-	expectedPath := filepath.Join(tempDir, "man", "mtrace.1")
+	expectedPath := filepath.Join(tempDir, "man", "mtracer.1")
 	if _, err := os.Stat(expectedPath); os.IsNotExist(err) {
 		t.Errorf("expected man page to be generated at %s", expectedPath)
 	}

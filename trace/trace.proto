@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package mtrace.trace;
+package mtracer.trace;
 
-option go_package = "github.com/mtrace-project/mtrace/trace";
+option go_package = "github.com/mtracer-project/mtracer/trace";
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
@@ -15,5 +15,5 @@ message TraceProto {
   google.protobuf.Duration        duration    = 4;
   int32                           span_count  = 5;
   int32                           error_count = 6;
-  repeated .mtrace.span.SpanProto spans       = 7;
+  repeated .mtracer.span.SpanProto spans       = 7;
 }

@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package mtrace.span;
+package mtracer.span;
 
-option go_package = "github.com/mtrace-project/mtrace/span";
+option go_package = "github.com/mtracer-project/mtracer/span";
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";

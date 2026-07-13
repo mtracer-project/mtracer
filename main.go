@@ -4,7 +4,7 @@ Copyright © 2026 NAME HERE alessandro.dinato@gmail.com
 package main
 
 import (
-	"github.com/mtrace-project/mtrace/cmd"
+	"github.com/mtracer-project/mtracer/cmd"
 
 	"github.com/joho/godotenv"
 )

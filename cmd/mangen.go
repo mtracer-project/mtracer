@@ -21,9 +21,9 @@ var gendocsCmd = &cobra.Command{
 		}
 
 		header := &doc.GenManHeader{
-			Title:   "Mtrace CLI",
+			Title:   "mtracer CLI",
 			Section: "1",
-			Source:  "Mtrace development team",
+			Source:  "mtracer development team",
 		}
 
 		if err := doc.GenManTree(rootCmd, header, path); err != nil {

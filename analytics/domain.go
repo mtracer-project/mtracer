@@ -6,8 +6,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/mtrace-project/mtrace/test"
-	"github.com/mtrace-project/mtrace/trace"
+	"github.com/mtracer-project/mtracer/test"
+	"github.com/mtracer-project/mtracer/trace"
 )
 
 type TestAnalytics struct {

@@ -1,3 +1,3 @@
 package domain
 
-const CLI_NAME = "mtrace"
+const CLI_NAME = "mtracer"

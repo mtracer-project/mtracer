@@ -19,7 +19,7 @@ case "${ARCH}" in
     *)          echo "Unsupported architecture: ${ARCH}"; exit 1;;
 esac
 
-REPO="mtrace-project/mtrace"
+REPO="mtracer-project/mtracer"
 REQUESTED_VERSION="${1:-latest}"
 
 if [ "${REQUESTED_VERSION}" = "latest" ]; then
@@ -47,7 +47,7 @@ else
     EXT="zip"
 fi
 
-FILENAME="mtrace_${VERSION#v}_${OS}_${ARCH}.${EXT}"
+FILENAME="mtracer_${VERSION#v}_${OS}_${ARCH}.${EXT}"
 DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${VERSION}/${FILENAME}"
 
 echo "Downloading ${FILENAME} from ${DOWNLOAD_URL}..."
@@ -55,17 +55,17 @@ curl -sL "${DOWNLOAD_URL}" -o "${FILENAME}"
 
 echo "Extracting..."
 if [ "${EXT}" = "zip" ]; then
-    unzip -q "${FILENAME}" -d mtrace_tmp
+    unzip -q "${FILENAME}" -d mtracer_tmp
 else
-    mkdir -p mtrace_tmp
-    tar -I zstd -xf "${FILENAME}" -C mtrace_tmp
+    mkdir -p mtracer_tmp
+    tar -I zstd -xf "${FILENAME}" -C mtracer_tmp
 fi
 
-echo "Installing to /usr/local/bin/mtrace (requires sudo)..."
-sudo mv mtrace_tmp/mtrace /usr/local/bin/mtrace
-sudo chmod +x /usr/local/bin/mtrace
+echo "Installing to /usr/local/bin/mtracer (requires sudo)..."
+sudo mv mtracer_tmp/mtracer /usr/local/bin/mtracer
+sudo chmod +x /usr/local/bin/mtracer
 
 # Cleanup
-rm -rf mtrace_tmp "${FILENAME}"
+rm -rf mtracer_tmp "${FILENAME}"
 
-echo "mtrace installed successfully!"
+echo "mtracer installed successfully!"

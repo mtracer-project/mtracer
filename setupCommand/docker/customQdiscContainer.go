@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mtrace-project/mtrace/parser"
+	"github.com/mtracer-project/mtracer/parser"
 )
 
 type CustomQdiscContainerCommand struct {

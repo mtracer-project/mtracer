@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/jstemmer/go-junit-report/v2/junit"
-	"github.com/mtrace-project/mtrace/test"
+	"github.com/mtracer-project/mtracer/test"
 )
 
 func TestJunitExporter_Export(t *testing.T) {

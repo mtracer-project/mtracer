@@ -144,7 +144,7 @@ var File_span_span_proto protoreflect.FileDescriptor
 
 const file_span_span_proto_rawDesc = "" +
 	"\n" +
-	"\x0fspan/span.proto\x12\vmtrace.span\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1cgoogle/protobuf/struct.proto\"\x91\x04\n" +
+	"\x0fspan/span.proto\x12\fmtracer.span\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1cgoogle/protobuf/struct.proto\"\x92\x04\n" +
 	"\tSpanProto\x12\x17\n" +
 	"\aspan_id\x18\x01 \x01(\tR\x06spanId\x12\x1b\n" +
 	"\tparent_id\x18\x02 \x01(\tR\bparentId\x12!\n" +
@@ -156,14 +156,14 @@ const file_span_span_proto_rawDesc = "" +
 	"\n" +
 	"start_time\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\tstartTime\x125\n" +
 	"\bend_time\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\aendTime\x125\n" +
-	"\bduration\x18\t \x01(\v2\x19.google.protobuf.DurationR\bduration\x12F\n" +
+	"\bduration\x18\t \x01(\v2\x19.google.protobuf.DurationR\bduration\x12G\n" +
 	"\n" +
 	"attributes\x18\n" +
-	" \x03(\v2&.mtrace.span.SpanProto.AttributesEntryR\n" +
+	" \x03(\v2'.mtracer.span.SpanProto.AttributesEntryR\n" +
 	"attributes\x1aU\n" +
 	"\x0fAttributesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12,\n" +
-	"\x05value\x18\x02 \x01(\v2\x16.google.protobuf.ValueR\x05value:\x028\x01B'Z%github.com/mtrace-project/mtrace/spanb\x06proto3"
+	"\x05value\x18\x02 \x01(\v2\x16.google.protobuf.ValueR\x05value:\x028\x01B)Z'github.com/mtracer-project/mtracer/spanb\x06proto3"
 
 var (
 	file_span_span_proto_rawDescOnce sync.Once
@@ -179,18 +179,18 @@ func file_span_span_proto_rawDescGZIP() []byte {
 
 var file_span_span_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_span_span_proto_goTypes = []any{
-	(*SpanProto)(nil),             // 0: mtrace.span.SpanProto
-	nil,                           // 1: mtrace.span.SpanProto.AttributesEntry
+	(*SpanProto)(nil),             // 0: mtracer.span.SpanProto
+	nil,                           // 1: mtracer.span.SpanProto.AttributesEntry
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 	(*durationpb.Duration)(nil),   // 3: google.protobuf.Duration
 	(*structpb.Value)(nil),        // 4: google.protobuf.Value
 }
 var file_span_span_proto_depIdxs = []int32{
-	2, // 0: mtrace.span.SpanProto.start_time:type_name -> google.protobuf.Timestamp
-	2, // 1: mtrace.span.SpanProto.end_time:type_name -> google.protobuf.Timestamp
-	3, // 2: mtrace.span.SpanProto.duration:type_name -> google.protobuf.Duration
-	1, // 3: mtrace.span.SpanProto.attributes:type_name -> mtrace.span.SpanProto.AttributesEntry
-	4, // 4: mtrace.span.SpanProto.AttributesEntry.value:type_name -> google.protobuf.Value
+	2, // 0: mtracer.span.SpanProto.start_time:type_name -> google.protobuf.Timestamp
+	2, // 1: mtracer.span.SpanProto.end_time:type_name -> google.protobuf.Timestamp
+	3, // 2: mtracer.span.SpanProto.duration:type_name -> google.protobuf.Duration
+	1, // 3: mtracer.span.SpanProto.attributes:type_name -> mtracer.span.SpanProto.AttributesEntry
+	4, // 4: mtracer.span.SpanProto.AttributesEntry.value:type_name -> google.protobuf.Value
 	5, // [5:5] is the sub-list for method output_type
 	5, // [5:5] is the sub-list for method input_type
 	5, // [5:5] is the sub-list for extension type_name

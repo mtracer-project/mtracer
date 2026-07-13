@@ -6,10 +6,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/cmd"
-	"github.com/mtrace-project/mtrace/configuration"
-	"github.com/mtrace-project/mtrace/configuration/openobserve"
-	testutils "github.com/mtrace-project/mtrace/testUtils"
+	"github.com/mtracer-project/mtracer/cmd"
+	"github.com/mtracer-project/mtracer/configuration"
+	"github.com/mtracer-project/mtracer/configuration/openobserve"
+	testutils "github.com/mtracer-project/mtracer/testUtils"
 )
 
 func TestCheckTestCase_InvalidArgument(t *testing.T) {
@@ -51,7 +51,7 @@ func TestCheckTestCase_NonExistentDirectory(t *testing.T) {
 }
 
 func TestCheckTestCase_ValidAndInvalid(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-check-validity")
+	tempDir, err := os.MkdirTemp("", "mtracer-check-validity")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -142,7 +142,7 @@ retryDelay: 10ms
 }
 
 func TestCheckTestCase_Quiet(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-check-quiet")
+	tempDir, err := os.MkdirTemp("", "mtracer-check-quiet")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}

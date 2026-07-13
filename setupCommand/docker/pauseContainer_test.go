@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/parser"
-	dockersetupcommand "github.com/mtrace-project/mtrace/setupCommand/docker"
+	"github.com/mtracer-project/mtracer/parser"
+	dockersetupcommand "github.com/mtracer-project/mtracer/setupCommand/docker"
 )
 
 type mockPausePauser struct {

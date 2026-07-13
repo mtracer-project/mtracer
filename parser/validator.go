@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mtrace-project/mtrace/domain"
+	"github.com/mtracer-project/mtracer/domain"
 )
 
 const (

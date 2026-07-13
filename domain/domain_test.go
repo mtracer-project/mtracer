@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mtrace-project/mtrace/domain"
+	"github.com/mtracer-project/mtracer/domain"
 
 	"go.yaml.in/yaml/v3"
 )

@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/mtrace-project/mtrace/configuration/jaeger"
-	"github.com/mtrace-project/mtrace/configuration/openobserve"
-	"github.com/mtrace-project/mtrace/trace"
+	"github.com/mtracer-project/mtracer/configuration/jaeger"
+	"github.com/mtracer-project/mtracer/configuration/openobserve"
+	"github.com/mtracer-project/mtracer/trace"
 )
 
 type AppConfig struct {

@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/mtrace-project/mtrace/domain"
+	"github.com/mtracer-project/mtracer/domain"
 )
 
 //go:embed templates/analytics.html

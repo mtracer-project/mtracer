@@ -8,9 +8,9 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/mtrace-project/mtrace/domain"
-	"github.com/mtrace-project/mtrace/export"
-	"github.com/mtrace-project/mtrace/trigger"
+	"github.com/mtracer-project/mtracer/domain"
+	"github.com/mtracer-project/mtracer/export"
+	"github.com/mtracer-project/mtracer/trigger"
 
 	"github.com/spf13/cobra"
 )

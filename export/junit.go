@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/jstemmer/go-junit-report/v2/junit"
-	"github.com/mtrace-project/mtrace/domain"
-	"github.com/mtrace-project/mtrace/test"
+	"github.com/mtracer-project/mtracer/domain"
+	"github.com/mtracer-project/mtracer/test"
 )
 
 type junitExporter struct {

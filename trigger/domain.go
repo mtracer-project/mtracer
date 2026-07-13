@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"strings"
 
-	idgenerator "github.com/mtrace-project/mtrace/idGenerator"
-	"github.com/mtrace-project/mtrace/parser"
+	idgenerator "github.com/mtracer-project/mtracer/idGenerator"
+	"github.com/mtracer-project/mtracer/parser"
 )
 
 type TraceId string

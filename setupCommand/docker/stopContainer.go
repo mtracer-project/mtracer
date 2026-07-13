@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/mtrace-project/mtrace/parser"
+	"github.com/mtracer-project/mtracer/parser"
 
 	"github.com/moby/moby/client"
 )

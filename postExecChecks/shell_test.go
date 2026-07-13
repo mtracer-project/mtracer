@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/parser"
-	postexecchecks "github.com/mtrace-project/mtrace/postExecChecks"
+	"github.com/mtracer-project/mtracer/parser"
+	postexecchecks "github.com/mtracer-project/mtracer/postExecChecks"
 )
 
 func TestNewShellPostExecCheck(t *testing.T) {

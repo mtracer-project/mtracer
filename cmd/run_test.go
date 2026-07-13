@@ -7,11 +7,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/cmd"
-	"github.com/mtrace-project/mtrace/configuration"
-	"github.com/mtrace-project/mtrace/configuration/jaeger"
-	"github.com/mtrace-project/mtrace/configuration/openobserve"
-	testutils "github.com/mtrace-project/mtrace/testUtils"
+	"github.com/mtracer-project/mtracer/cmd"
+	"github.com/mtracer-project/mtracer/configuration"
+	"github.com/mtracer-project/mtracer/configuration/jaeger"
+	"github.com/mtracer-project/mtracer/configuration/openobserve"
+	testutils "github.com/mtracer-project/mtracer/testUtils"
 )
 
 func TestRunTests_InvalidArgument(t *testing.T) {
@@ -26,7 +26,7 @@ func TestRunTests_InvalidArgument(t *testing.T) {
 }
 
 func TestRunTests_InvalidExportFormat(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-test-invalid-export")
+	tempDir, err := os.MkdirTemp("", "mtracer-test-invalid-export")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -98,7 +98,7 @@ func TestRunTests_NonExistentDirectory(t *testing.T) {
 }
 
 func TestRunTests_NoFilesFound(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-test-empty")
+	tempDir, err := os.MkdirTemp("", "mtracer-test-empty")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -120,7 +120,7 @@ func TestRunTests_NoFilesFound(t *testing.T) {
 }
 
 func TestRunTests_ParseError(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-test-parse-err")
+	tempDir, err := os.MkdirTemp("", "mtracer-test-parse-err")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -148,7 +148,7 @@ trigger:
 }
 
 func TestRunTests_E2E_Success(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-test-e2e-success")
+	tempDir, err := os.MkdirTemp("", "mtracer-test-e2e-success")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -238,7 +238,7 @@ retryDelay: 10ms
 }
 
 func TestRunTests_E2E_Failure(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-test-e2e-failure")
+	tempDir, err := os.MkdirTemp("", "mtracer-test-e2e-failure")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -298,7 +298,7 @@ retryDelay: 10ms
 }
 
 func TestRunTests_Jaeger_E2E_Success(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-test-jaeger-e2e-success")
+	tempDir, err := os.MkdirTemp("", "mtracer-test-jaeger-e2e-success")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -398,7 +398,7 @@ retryDelay: 10ms
 }
 
 func TestRunTests_MultipleTests_DisplayTable(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-test-multiple")
+	tempDir, err := os.MkdirTemp("", "mtracer-test-multiple")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -521,7 +521,7 @@ retryDelay: 10ms
 }
 
 func TestRunTests_Quiet(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-run-quiet")
+	tempDir, err := os.MkdirTemp("", "mtracer-run-quiet")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}

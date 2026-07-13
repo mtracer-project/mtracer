@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/cmd"
-	testutils "github.com/mtrace-project/mtrace/testUtils"
+	"github.com/mtracer-project/mtracer/cmd"
+	testutils "github.com/mtracer-project/mtracer/testUtils"
 )
 
 func TestCreateTestCase_NoArgs(t *testing.T) {
@@ -22,7 +22,7 @@ func TestCreateTestCase_NoArgs(t *testing.T) {
 }
 
 func TestCreateTestCase_Success(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-cmd-create")
+	tempDir, err := os.MkdirTemp("", "mtracer-cmd-create")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -67,7 +67,7 @@ func TestCreateTestCase_Success(t *testing.T) {
 }
 
 func TestCreateTestCase_AlreadyExists(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-cmd-create-exist")
+	tempDir, err := os.MkdirTemp("", "mtracer-cmd-create-exist")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -98,7 +98,7 @@ func TestCreateTestCase_AlreadyExists(t *testing.T) {
 }
 
 func TestCreateTestCase_DifferentTriggerTypes(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-cmd-create-triggers")
+	tempDir, err := os.MkdirTemp("", "mtracer-cmd-create-triggers")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -151,7 +151,7 @@ func TestCreateTestCase_DifferentTriggerTypes(t *testing.T) {
 }
 
 func TestCreateTestCase_Quiet(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtrace-cmd-create-quiet")
+	tempDir, err := os.MkdirTemp("", "mtracer-cmd-create-quiet")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}

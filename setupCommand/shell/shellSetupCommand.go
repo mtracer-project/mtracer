@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/mtrace-project/mtrace/domain"
-	"github.com/mtrace-project/mtrace/parser"
+	"github.com/mtracer-project/mtracer/domain"
+	"github.com/mtracer-project/mtracer/parser"
 )
 
 /*---------------- SetupCommand ----------------*/

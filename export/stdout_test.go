@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mtrace-project/mtrace/test"
-	testutils "github.com/mtrace-project/mtrace/testUtils"
+	"github.com/mtracer-project/mtracer/test"
+	testutils "github.com/mtracer-project/mtracer/testUtils"
 )
 
 func TestStdoutExporter_Export(t *testing.T) {

@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/parser"
-	dockersetupcommand "github.com/mtrace-project/mtrace/setupCommand/docker"
+	"github.com/mtracer-project/mtracer/parser"
+	dockersetupcommand "github.com/mtracer-project/mtracer/setupCommand/docker"
 )
 
 func TestNewComposeUpCommand(t *testing.T) {
@@ -87,7 +87,7 @@ func setupMockDocker(t *testing.T, fail bool) (string, func()) {
 
 	scriptContent := `#!/bin/sh
 echo "$@" >> "` + logFile + `"
-if [ "$MTRACE_TEST_FAIL" = "true" ]; then
+if [ "$MTRACER_TEST_FAIL" = "true" ]; then
   echo "mock docker error output" >&2
   exit 1
 else
@@ -101,15 +101,15 @@ fi
 
 	oldPath := os.Getenv("PATH")
 	newPath := binDir + string(filepath.ListSeparator) + oldPath
-	os.Setenv("PATH", newPath)             // nolint:errcheck,gosec
-	os.Setenv("MTRACE_TEST_FAIL", "false") // nolint:errcheck,gosec
+	os.Setenv("PATH", newPath)              // nolint:errcheck,gosec
+	os.Setenv("MTRACER_TEST_FAIL", "false") // nolint:errcheck,gosec
 	if fail {
-		os.Setenv("MTRACE_TEST_FAIL", "true") // nolint:errcheck,gosec
+		os.Setenv("MTRACER_TEST_FAIL", "true") // nolint:errcheck,gosec
 	}
 
 	cleanup := func() {
-		os.Setenv("PATH", oldPath)      // nolint:errcheck,gosec
-		os.Unsetenv("MTRACE_TEST_FAIL") // nolint:errcheck,gosec
+		os.Setenv("PATH", oldPath)       // nolint:errcheck,gosec
+		os.Unsetenv("MTRACER_TEST_FAIL") // nolint:errcheck,gosec
 	}
 
 	return logFile, cleanup

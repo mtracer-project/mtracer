@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/mtrace-project/mtrace/parser"
+	"github.com/mtracer-project/mtracer/parser"
 )
 
 type ComposeUpCommand struct {

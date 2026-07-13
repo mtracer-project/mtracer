@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mtrace-project/mtrace/domain"
-	"github.com/mtrace-project/mtrace/parser"
-	"github.com/mtrace-project/mtrace/span"
-	"github.com/mtrace-project/mtrace/trace"
+	"github.com/mtracer-project/mtracer/domain"
+	"github.com/mtracer-project/mtracer/parser"
+	"github.com/mtracer-project/mtracer/span"
+	"github.com/mtracer-project/mtracer/trace"
 )
 
 func TestNewTraceSpansComparator(t *testing.T) {

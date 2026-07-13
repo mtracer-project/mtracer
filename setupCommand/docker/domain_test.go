@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mtrace-project/mtrace/parser"
-	dockersetupcommand "github.com/mtrace-project/mtrace/setupCommand/docker"
-	testutils "github.com/mtrace-project/mtrace/testUtils"
+	"github.com/mtracer-project/mtracer/parser"
+	dockersetupcommand "github.com/mtracer-project/mtracer/setupCommand/docker"
+	testutils "github.com/mtracer-project/mtracer/testUtils"
 
 	"github.com/moby/moby/client"
 )

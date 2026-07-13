@@ -12,7 +12,7 @@ import (
 //
 // cmdName is the name of the command to mock (e.g. "npx" or "docker").
 // scriptContent is the shell script body. If empty, a default script is used that logs arguments
-// and exits with 0 (or 1 if MTRACE_TEST_FAIL env var is "true").
+// and exits with 0 (or 1 if MTRACER_TEST_FAIL env var is "true").
 func SetupMockExecutable(t *testing.T, cmdName string, scriptContent string) (string, func()) {
 	t.Helper()
 	tmpDir := t.TempDir()
@@ -27,7 +27,7 @@ func SetupMockExecutable(t *testing.T, cmdName string, scriptContent string) (st
 	if scriptContent == "" {
 		scriptContent = `#!/bin/sh
 echo "$@" >> "` + logFile + `"
-if [ "$MTRACE_TEST_FAIL" = "true" ]; then
+if [ "$MTRACER_TEST_FAIL" = "true" ]; then
   echo "mock ` + cmdName + ` error output" >&2
   exit 1
 else
@@ -51,8 +51,8 @@ fi
 		if err := os.Setenv("PATH", oldPath); err != nil {
 			t.Fatalf("failed to set PATH: %v", err)
 		}
-		if err := os.Unsetenv("MTRACE_TEST_FAIL"); err != nil {
-			t.Fatalf("failed to unset MTRACE_TEST_FAIL: %v", err)
+		if err := os.Unsetenv("MTRACER_TEST_FAIL"); err != nil {
+			t.Fatalf("failed to unset MTRACER_TEST_FAIL: %v", err)
 		}
 	}
 

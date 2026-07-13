@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mtrace-project/mtrace/parser"
+	"github.com/mtracer-project/mtracer/parser"
 
-	docker "github.com/mtrace-project/mtrace/setupCommand/docker"
-	shell "github.com/mtrace-project/mtrace/setupCommand/shell"
+	docker "github.com/mtracer-project/mtracer/setupCommand/docker"
+	shell "github.com/mtracer-project/mtracer/setupCommand/shell"
 
 	"github.com/moby/moby/client"
 )

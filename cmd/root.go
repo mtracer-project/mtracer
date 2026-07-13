@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mtrace-project/mtrace/configuration"
-	"github.com/mtrace-project/mtrace/domain"
+	"github.com/mtracer-project/mtracer/configuration"
+	"github.com/mtracer-project/mtracer/domain"
 
 	"github.com/lmittmann/tint"
 	"github.com/spf13/cobra"
@@ -77,7 +77,7 @@ func initConfig(cmd *cobra.Command, args []string) error {
 	viper.SetDefault("jaeger.base_url", "http://localhost:16686")
 
 	// LEVEL 3 - environment variables setup
-	viper.SetEnvPrefix("MTRACE")
+	viper.SetEnvPrefix("MTRACER")
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_", "-", "_"))
 	viper.AutomaticEnv()
 
@@ -103,7 +103,7 @@ func initConfig(cmd *cobra.Command, args []string) error {
 		viper.SetConfigFile(ConfigFile)
 	} else {
 		viper.AddConfigPath(".")
-		viper.SetConfigName("mtrace")
+		viper.SetConfigName("mtracer")
 		viper.SetConfigType("yaml")
 	}
 

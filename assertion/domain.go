@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mtrace-project/mtrace/parser"
-	"github.com/mtrace-project/mtrace/trace"
+	"github.com/mtracer-project/mtracer/parser"
+	"github.com/mtracer-project/mtracer/trace"
 )
 
 type Assertion interface {
