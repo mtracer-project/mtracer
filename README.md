@@ -2,7 +2,7 @@
   <img src="logos/mtracer-red-logo.svg" width="300" alt="Mtracer Logo">
 </p>
 
-**[Mtracer](https://mtracer-project.github.io/)** is a CLI tool for end-to-end testing powered by trace validation. It enables developers to define assertions in YAML files, execute tests, and verify application behavior directly against OpenTelemetry traces.
+**[Mtracer](https://mtracer-project.github.io/)** is a CLI tool for system testing powered by trace validation. It enables developers to define assertions in YAML files, execute tests, and verify application behavior directly against OpenTelemetry traces.
 
 [![License][License-Image]][License-Url] [![Build][Build-Status-Image]][Build-Status-Url] [![Release][Release-Image]][Release-Url] [![GitHub Downloads][GitHub-Image]][Somsubhra-URL]
 
@@ -66,7 +66,7 @@ flowchart TD
 ```
 
 
-Mtracer operates as an end-to-end testing orchestrator using the following lifecycle:
+Mtracer operates as a system testing orchestrator using the following lifecycle:
 
 1. **Pre-Execution**: Mtracer runs any specified `setupCommands` to prepare the test environment.
 2. **Trigger Execution**: Mtracer executes the configured `trigger` (e.g., an HTTP or gRPC call). It injects a unique `trace_id` into the request header which propagates through the services under test.

@@ -160,7 +160,7 @@ winget:
     description: "mtracer is a CLI tool designed to facilitate testing through trace validation with tracing functionalities on distributed systems."
     tags:
       - golang
-      - e2e
+      - system-testing
       - open-telemetry
       - otel
       - distributed-systems

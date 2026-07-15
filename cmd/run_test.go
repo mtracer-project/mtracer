@@ -147,8 +147,8 @@ trigger:
 	}
 }
 
-func TestRunTests_E2E_Success(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtracer-test-e2e-success")
+func TestRunTests_System_Success(t *testing.T) {
+	tempDir, err := os.MkdirTemp("", "mtracer-test-system-success")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -237,8 +237,8 @@ retryDelay: 10ms
 	}
 }
 
-func TestRunTests_E2E_Failure(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtracer-test-e2e-failure")
+func TestRunTests_System_Failure(t *testing.T) {
+	tempDir, err := os.MkdirTemp("", "mtracer-test-system-failure")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
@@ -297,8 +297,8 @@ retryDelay: 10ms
 	}
 }
 
-func TestRunTests_Jaeger_E2E_Success(t *testing.T) {
-	tempDir, err := os.MkdirTemp("", "mtracer-test-jaeger-e2e-success")
+func TestRunTests_Jaeger_System_Success(t *testing.T) {
+	tempDir, err := os.MkdirTemp("", "mtracer-test-jaeger-system-success")
 	if err != nil {
 		t.Fatalf("failed to create temp dir: %v", err)
 	}
