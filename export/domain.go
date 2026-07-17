@@ -40,7 +40,7 @@ func NewExporters(formats []string, runCount int, baseDir string) ([]Exporter, e
 			exporters[format] = newJSONExporter(folderPath, fmt.Sprintf("%s_test_results.json", timestamp.Format(domain.FILENAME_DATE_FORMAT)), timestamp)
 		case JUNIT_FORMAT:
 			exporters[format] = newJunitExporter(folderPath, fmt.Sprintf("%s_test_results.xml", timestamp.Format(domain.FILENAME_DATE_FORMAT)), timestamp)
-		case MARKDOWN_FORMAT, "md":
+		case MARKDOWN_FORMAT:
 			exporters[format] = newMarkdownExporter(runCount, folderPath, fmt.Sprintf("%s_test_results.md", timestamp.Format(domain.FILENAME_DATE_FORMAT)), timestamp)
 		case STDOUT_FORMAT:
 			exporters[format] = newStdoutExporter(runCount)
