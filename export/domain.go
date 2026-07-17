@@ -31,6 +31,9 @@ func NewExporters(formats []string, runCount int, baseDir string) ([]Exporter, e
 	exporters := make(map[string]Exporter, len(formats))
 	timestamp := time.Now()
 	for _, format := range formats {
+		if format == "md" {
+			format = MARKDOWN_FORMAT
+		}
 		folderPath := filepath.Join(baseDir, fmt.Sprintf("%s_exports", format))
 		switch format {
 		case JSON_FORMAT:
